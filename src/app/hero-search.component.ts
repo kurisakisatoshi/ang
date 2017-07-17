@@ -59,7 +59,7 @@ export class HeroSearchComponent implements OnInit {
 
   gotoDetail(hero: Hero): void {
     let link = ['/detail', hero.id];
-    this.router.navigate(link);
+    this.router.navigate(link, { queryParams: { a: 'aa', b: 'bb' } });
   }
 
   private _subject: AsyncSubject<string> = new AsyncSubject();
